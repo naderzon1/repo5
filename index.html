@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinosaurios y la Era del Pleistoceno</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: #263238;
+            background: #f3f6f1;
+        }
+
+        header {
+            min-height: 430px;
+            padding: 70px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            background:
+                linear-gradient(rgba(20, 45, 31, .72), rgba(20, 45, 31, .82)),
+                url("https://images.unsplash.com/photo-1606854825006-8f5f3f8f5f2f?auto=format&fit=crop&w=1600&q=80")
+                center/cover;
+        }
+
+        .hero {
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.4rem, 6vw, 4.5rem);
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        nav {
+            background: #173c2a;
+            padding: 14px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 14px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #c8e6c9;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 55px 20px;
+        }
+
+        section {
+            margin-bottom: 55px;
+        }
+
+        h2 {
+            color: #be2490;
+            font-size: 2rem;
+            margin-bottom: 18px;
+            border-left: 6px solid #8aa66a;
+            padding-left: 14px;
+        }
+
+        h3 {
+            color: #be2490;
+            margin-bottom: 8px;
+        }
+
+        .intro {
+            background: white;
+            border-radius: 18px;
+            padding: 28px;
+            box-shadow: 0 8px 25px rgba(0,0,0,.08);
+        }
+
+        .alert {
+            background: #fff7df;
+            border-left: 6px solid #d49b2a;
+            padding: 22px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 7px 22px rgba(0,0,0,.08);
+            transition: transform .2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .number {
+            display: inline-block;
+            background: #6d8d52;
+            color: white;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 42px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .animals {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .animal {
+            background: #e7efe3;
+            padding: 22px;
+            border-radius: 15px;
+        }
+
+        .animal .icon {
+            font-size: 2.6rem;
+            margin-bottom: 8px;
+        }
+
+        .fact {
+            background: linear-gradient(135deg, #2bd537, #0cca18);
+            color: white;
+            padding: 35px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .fact h2 {
+            color: white;
+            border-color: #d9e8c5;
+        }
+
+        ul {
+            padding-left: 24px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background: #1654ac;
+            color: #dce8df;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        @media (max-width: 650px) {
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+                font-size: .9rem;
+            }
+
+            header {
+                min-height: 380px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header id="inicio">
+    <div class="hero">
+        <h1>🦖 Dinosaurios y el Pleistoceno</h1>
+        <p>
+            Una mirada al pasado para comprender qué ocurrió con los dinosaurios
+            y qué animales dominaron la Tierra durante la última gran época glacial.
+        </p>
+    </div>
+</header>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#periodo">Pleistoceno</a>
+    <a href="#dinosaurios">Dinosaurios</a>
+    <a href="#fauna">Fauna</a>
+    <a href="#curiosidades">Curiosidades</a>
+</nav>
+
+<main>
+
+    <section id="periodo">
+        <h2>¿Qué fue el Pleistoceno?</h2>
+
+        <div class="intro">
+            <p>
+                El <strong>Pleistoceno</strong> fue una época del período Cuaternario
+                que comenzó hace aproximadamente <strong>2,58 millones de años</strong>
+                y terminó hace unos <strong>11.700 años</strong>. Se caracterizó por
+                grandes cambios climáticos y por la sucesión de numerosas glaciaciones.
+            </p>
+
+           <p> Los dinosaurios son un grupo de reptiles que han vivido en la Tierra durante unos 245 millones de años. 
+         En 1842, el naturalista inglés Sir Richard Owen acuñó el término Dinosauria, derivado del griego  deinos , que significa "terriblemente grande", y  sauros , que significa "lagarto".
+        Se han encontrado fósiles de dinosaurios en los siete continentes.
+        Todos los dinosaurios no aviares se extinguieron hace unos 66 millones de años.
+        Se conocen aproximadamente 700 especies de dinosaurios extintos.
+        Las aves modernas son una especie de dinosaurio porque comparten un ancestro común con los dinosaurios no aviares.</p>
+
+            <div class="alert">
+                <strong>⚠️ Importante:</strong> los dinosaurios no avianos
+                <strong>no vivieron durante el Pleistoceno</strong>. Se extinguieron
+                aproximadamente 66 millones de años antes, al final del Cretácico.
+                Por eso, hablar de "dinosaurios del Pleistoceno" puede llevar a una
+                confusión histórica.
+            </div>
+        </div>
+    </section>
+
+    <section id="dinosaurios">
+        <h2>¿Dónde quedaron los dinosaurios?</h2>
+
+        <div class="timeline">
+            <div class="card">
+                <span class="number">1</span>
+                <h3>Era Mesozoica</h3>
+                <p>
+                    Los dinosaurios dominaron muchos ecosistemas terrestres durante
+                    gran parte de la Era Mesozoica, especialmente durante el Jurásico
+                    y el Cretácico.
+                </p>
+            </div>
+
+            <div class="card">
+                <span class="number">2</span>
+                <h3>Hace 66 millones de años</h3>
+                <p>
+                    Una gran extinción marcó el final del Cretácico. Desaparecieron
+                    los dinosaurios no avianos, junto con muchas otras especies.
+                </p>
+            </div>
+
+            <div class="card">
+                <span class="number">3</span>
+                <h3>Mucho después</h3>
+                <p>
+                    Millones de años más tarde comenzó el Pleistoceno. Para entonces,
+                    los dinosaurios no avianos ya habían desaparecido.
+                </p>
+            </div>
+
+            <div class="card">
+                <span class="number">4</span>
+                <h3>Las aves</h3>
+                <p>
+                    Las aves son dinosaurios avianos. Por ello, en sentido evolutivo,
+                    los dinosaurios sí estuvieron presentes durante el Pleistoceno
+                    en forma de aves.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="fauna">
+        <h2>Los grandes animales del Pleistoceno</h2>
+
+        <p style="margin-bottom:20px;">
+            Aunque los grandes dinosaurios ya no existían, el Pleistoceno estuvo
+            habitado por una impresionante <strong>megafauna</strong>.
+        </p>
+
+        <div class="animals">
+            <div class="animal">
+                <div class="icon">🦣</div>
+                <h3>Mamuts</h3>
+                <p>
+                    Grandes parientes de los elefantes que se adaptaron a ambientes
+                    fríos. Algunas especies poseían enormes colmillos curvados.
+                </p>
+            </div>
+
+            <div class="animal">
+                <div class="icon">🦏</div>
+                <h3>Rinocerontes lanudos</h3>
+                <p>
+                    Herbívoros cubiertos de pelo que vivieron en regiones frías
+                    de Eurasia durante diferentes etapas del Pleistoceno.
+                </p>
+            </div>
+
+            <div class="animal">
+                <div class="icon">🐯</div>
+                <h3>Felinos de gran tamaño</h3>
+                <p>
+                    Diversos grandes depredadores, incluidos felinos con dientes
+                    de sable, ocuparon distintos ecosistemas.
+                </p>
+            </div>
+
+            <div class="animal">
+                <div class="icon">🦥</div>
+                <h3>Perezosos gigantes</h3>
+                <p>
+                    En América existieron enormes perezosos terrestres, algunos
+                    de los cuales alcanzaban varios metros de longitud.
+                </p>
+            </div>
+
+            <div class="animal">
+                <div class="icon">🐺</div>
+                <h3>Lobos y otros depredadores</h3>
+                <p>
+                    Los ecosistemas pleistocénicos también contaban con cánidos,
+                    osos y otros grandes carnívoros.
+                </p>
+            </div>
+
+            <div class="animal">
+                <div class="icon">🦅</div>
+                <h3>Aves</h3>
+                <p>
+                    Las aves, descendientes de dinosaurios terópodos, continuaron
+                    evolucionando y diversificándose durante el Pleistoceno.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="fact" id="curiosidades">
+            <h2>🧠 ¿Sabías que...?</h2>
+            <p>
+                Cuando vemos una gallina, un águila o un avestruz, estamos observando
+                a los descendientes de una rama de dinosaurios que sobrevivió a la
+                extinción del final del Cretácico.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>🌎 El clima y los seres humanos</h2>
+
+        <div class="intro">
+            <p>
+                Durante el Pleistoceno se produjeron importantes variaciones
+                climáticas. Grandes capas de hielo avanzaron y retrocedieron en
+                diferentes momentos, modificando paisajes y ecosistemas.
+            </p>
+
+            <p style="margin-top:15px;">
+                Además, diferentes especies del género <strong>Homo</strong>,
+                incluyendo nuestra especie, <strong>Homo sapiens</strong>, vivieron
+                durante esta época. Los seres humanos compartieron algunos
+                ecosistemas con la megafauna pleistocénica.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>📚 Resumen</h2>
+
+        <div class="intro">
+            <ul>
+                <li>El Pleistoceno comenzó hace aproximadamente 2,58 millones de años.</li>
+                <li>Terminó hace aproximadamente 11.700 años.</li>
+                <li>Los dinosaurios no avianos se extinguieron hace unos 66 millones de años.</li>
+                <li>Las aves son dinosaurios avianos y sí existieron durante el Pleistoceno.</li>
+                <li>El Pleistoceno fue famoso por sus glaciaciones y su megafauna.</li>
+                <li>Mamuts, rinocerontes lanudos, grandes felinos y perezosos gigantes son algunos ejemplos de animales de esta época.</li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p><strong>Trabajo informativo: Dinosaurios y Era del Pleistoceno</strong></p>
+    <p>Diseño educativo en HTML y CSS • 2026</p>
+</footer>
+
+</body>
+</html>
