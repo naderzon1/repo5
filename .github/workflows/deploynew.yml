@@ -3,7 +3,7 @@ name: 🚀 Tarea de Despliegue
 on:
    push:
      branches:
-       
+       Johnatan
 
 jobs:
   deploy:
@@ -17,9 +17,9 @@ jobs:
       - name: 📂 Sincronizando archivos via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server:  ftp-naderzonweb.alwaysdata.net # Change if using another host
-          username: naderzonweb
-          password: Nm265526%
+          server:  ftp-jojoapp.alwaysdata.net # Change if using another host
+          username: jojoapp
+          password: 3108787231Jc.
           server-dir: www/ # Replace with your correct path
           protocol: ftps
           timeout: 86400000
